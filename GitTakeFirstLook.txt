@@ -1,14 +1,20 @@
+############################################################################################
+
 yum update
 yum -y isntall git
 
+############################################################################################
+
 git config --global user.name "<>"
 git config --global user.email "<>"
-
 git config --list
 
-ssh-keygen (ssh-keygen -t rsa -b 4096)
+############################################################################################
 
+ssh-keygen (ssh-keygen -t rsa -b 4096)
 cat .ssh/id_rsa.pub
+
+############################################################################################
 
 git clone git@github.com:<your git name>/<your repository name>.git </way/folder>
 (can take url from github on your repository)
@@ -18,12 +24,13 @@ cd </way/folder>
 git checkout -b feature
 (make new branch and change HEAD)
 
-****make changes****
+############################################################################################
 
 cd .git
 (can look at .git and confgi and other)
 
 git add .
+git add --all
 (index all of your changes files)
 
 git status
@@ -37,3 +44,15 @@ git status
 git push -u origin <branch name>
 
 than go to github and make pull request
+
+############################################################################################
+
+git reset --hard HEAD~1
+git push -f
+
+############################################################################################
+
+git commit --amend
+
+############################################################################################
+
