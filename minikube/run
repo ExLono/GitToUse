@@ -1,0 +1,18 @@
+adduser developer
+# password@7
+usermod -aG sudo developer
+
+su - developer
+# password@7
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
+- Re-Login or Restart the Server
+
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+chmod +x minikube
+mv ./minikube /usr/local/bin/minikube
+
+minikube start --driver=docker
+
+docker ps
