@@ -1,20 +1,24 @@
 ############################################################################################
+# install
 
 yum update
 yum -y isntall git
 
 ############################################################################################
+# config yours name and email
 
 git config --global user.name "<>"
 git config --global user.email "<>"
 git config --list
 
 ############################################################################################
+# if need add ssh
 
 ssh-keygen (ssh-keygen -t rsa -b 4096)
 cat .ssh/id_rsa.pub
 
 ############################################################################################
+# clone remote rep
 
 git clone git@github.com:<your git name>/<your repository name>.git </way/folder>
 (can take url from github on your repository)
@@ -25,9 +29,10 @@ git checkout -b feature
 (make new branch and change HEAD)
 
 ############################################################################################
+# take commit
 
-cd .git
-(can look at .git and confgi and other)
+#cd .git
+#(can look at .git and confgi and other)
 
 git add .
 git add --all
@@ -41,18 +46,42 @@ git commit -m "<What we have done (#Number of tiket)>"
 git status
 (check commit: nothing to commit)
 
+# if need new branch
 git push -u origin <branch name>
 
 than go to github and make pull request
 
 ############################################################################################
+# delete last commit
 
 git reset --hard HEAD~1
 git push -f
 
 ############################################################################################
+# add to commit
 
 git commit --amend
 
 ############################################################################################
+# create remote rep
+
+git remote add origin git@github.com:myuser/project.git
+
+git remote -v
+
+origin git@github.com:myuser/project.git (fetch)
+origin git@github.com:myuser/project.git (push)
+
+# cancel
+git remote rm origin
+
+############################################################################################
+# update pull
+
+git pull
+
+# if need to reweite you local repo
+
+git fetch -all
+git reset --hard github/master
 
